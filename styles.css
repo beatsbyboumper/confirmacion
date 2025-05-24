@@ -1,0 +1,81 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #000000;
+}
+h1, h2, p {
+    margin: 0;
+}
+@keyframes brillo {
+    0% {
+        text-shadow: 0 0 5px #832717, 0 0 10px #85341b, 0 0 15px #9c2921, 0 0 20px #8b3c17, 0 0 30px #8b4f17;
+    }
+    50% {
+        text-shadow: 0 0 20px #942525, 0 0 30px #941f1f, 0 0 40px #8b2121, 0 0 50px #8b1717, 0 0 60px #8b1717;
+    }
+    100% {
+        text-shadow: 0 0 5px #832323, 0 0 10px #8d2323, 0 0 15px #8a2222, 0 0 20px #8b2817, 0 0 30px #8b3217;
+    }
+}
+.titulo {
+    color: #e02b2b;
+    font-size: 2.5em;
+    animation: brillo 1.5s infinite alternate;
+}
+.main {
+    padding: 20px;
+    text-align: center;
+}
+.beat-item {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+.description {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ddd;
+}
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #da3428;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.buy-button:hover {
+    background-color: #6d0808;
+    transform: translateY(-3px);
+}
+.debajo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #696969;
+    background-color: #111;
+    padding: 30px;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+}
+.img img {
+    width: 150px;
+    height: auto;
+    display: block;
+}

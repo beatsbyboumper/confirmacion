@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar reserva | Boumper X Beats</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="img">
+    <img src="Logo no glitch.png" alt="Logo">
+  </header>
+
+  <main class="main">
+    <h1 class="titulo">Confirmar Reserva</h1>
+    <p class="subtitle" id="nombre-beat">Cargando beat...</p>
+
+    <div class="beat-item">
+      <p class="description">✔ Este beat incluye licencia profesional para uso comercial.</p>
+      <p class="description">✔ Archivo WAV/MP3 sin marca de agua.</p>
+      <p class="description">✔ Soporte post-venta incluido vía Instagram o email.</p>
+      <p class="description">✔ Compra segura mediante Mercado Pago o PayPal.</p>
+    </div>
+
+    <button id="boton-pagar" class="buy-button">Mercado Pago</button>
+    <button id="boton-pagar" class="buy-button">Paypal</button>
+
+    <p class="debajo">¿Dudas? Contactanos por:  <a href="https://www.instagram.com/boumper_x/" target="_blank" style="color: #e02b2b;"> @boumper_x</a></p>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Boumper X. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const beat = params.get("beat");
+    const nombreBeat = decodeURIComponent(beat || "Desconocido");
+
+    document.getElementById("nombre-beat").textContent = `Beat seleccionado: "${nombreBeat}"`;
+
+    document.getElementById("boton-pagar").addEventListener("click", () => {
+      // Redirige al link de pago correspondiente
+      if (nombreBeat === "Dark Soul") {
+        window.open("https://mpago.la/link-dark-soul", "_blank");
+      } else if (nombreBeat === "Sample Vibe") {
+        window.open("https://mpago.la/link-sample-vibe", "_blank");
+      } else {
+        window.open("https://mpago.la/link-generico", "_blank");
+      }
+    });
+  </script>
+</body>
+</html>
