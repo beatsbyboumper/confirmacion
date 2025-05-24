@@ -33,11 +33,7 @@
   </footer>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const beat = params.get("beat");
-    const nombreBeat = decodeURIComponent(beat || "Desconocido");
-
-    document.getElementById("nombre-beat").textContent = `Beat seleccionado: "${nombreBeat}"`;
+   
 
     document.getElementById("boton-pagar").addEventListener("click", () => {
       // Redirige al link de pago correspondiente
