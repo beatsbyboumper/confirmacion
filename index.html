@@ -13,19 +13,26 @@
 
   <main class="main">
     <h1 class="titulo">Confirmar Reserva</h1>
-    <p class="subtitle" id="nombre-beat">Cargando beat...</p>
 
+   
     <div class="beat-item">
-      <p class="description">✔ Este beat incluye licencia profesional para uso comercial.</p>
-      <p class="description">✔ Archivo WAV/MP3 sin marca de agua.</p>
-      <p class="description">✔ Soporte post-venta incluido vía Instagram o email.</p>
-      <p class="description">✔ Compra segura mediante Mercado Pago o PayPal.</p>
+      
+      <p class="description">✔ Este sitio asegura que tu compra sea segura y profesional.</p>
+      
+      <p class="description">✔ Todos los beats incluyen licencia profesional, archivos en alta calidad sin marcas y soporte personalizado.</p>
+      
+      <p class="description">✔ Elige pagar con Mercado Pago o PayPal con un valor de 50$Usd o 50.000$Ars.</p>
+
+       <p class="description">✔ Al realizar el pago seras redirigido al WhatsApp de Beatsbyboumper para confirmar el beat comprado.</p>
+    
     </div>
 
-    <button id="boton-pagar" class="buy-button">Mercado Pago</button>
-    
+    <button id="boton-pagar" class="buy-button">Reservar ahora</button>
 
-    <p class="debajo">¿Dudas? Contactanos por:  <a href="https://www.instagram.com/boumper_x/" target="_blank" style="color: #e02b2b;"> @boumper_x</a></p>
+    <p class="debajo">
+      ¿Tenés dudas? Contactanos directamente en
+      <a href="https://www.instagram.com/boumperx/" target="_blank" style="color: #e02b2b;">@boumperx</a>
+    </p>
   </main>
 
   <footer class="footer">
@@ -33,17 +40,15 @@
   </footer>
 
   <script>
-   
-
     document.getElementById("boton-pagar").addEventListener("click", () => {
-      // Redirige al link de pago correspondiente
-      if (nombreBeat === "Dark Soul") {
-        window.open("https://mpago.la/1WBsStX", "_blank");
-      } else if (nombreBeat === "Sample Vibe") {
-        window.open("https://mpago.la/link-sample-vibe", "_blank");
-      } else {
-        window.open("https://mpago.la/link-generico", "_blank");
-      }
+      // Paso 1: Redirigir al link de pago (puede ser único o con alias)
+      window.open("https://mpago.la/1WBsStX", "_blank");
+
+      // Paso 2: Redirigir al WhatsApp para confirmar el beat
+      setTimeout(() => {
+        const mensaje = encodeURIComponent("Hola Boumper, ya realicé el pago. Quiero confirmar la reserva de mi beat.");
+        window.location.href = `https://wa.me/549XXXXXXXXXX?text=${mensaje}`;
+      }, 1000); // espera 1 segundo después de abrir el pago
     });
   </script>
 </body>
