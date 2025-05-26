@@ -23,6 +23,7 @@ h1, h2, p {
     color: #e02b2b;
     font-size: 2.5em;
     animation: brillo 1.5s infinite alternate;
+    height: 12vh;
 }
 .main {
     padding: 20px;
@@ -53,6 +54,7 @@ h1, h2, p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    
 }
 .buy-button:hover {
     background-color: #6d0808;
