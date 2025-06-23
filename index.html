@@ -28,7 +28,7 @@
     </div>
 
     <button id="boton-pagar" class="buy-button">Mercado Pago</button>
-    <button id="boton-pagar" class="buy-button-pp">Paypal</button>
+    <button id="boton-pagar-pp" class="buy-button">Paypal</button>
 
     <p class="debajo">
       ¿Tenés dudas? Contactanos directamente en
@@ -44,6 +44,16 @@
     document.getElementById("boton-pagar").addEventListener("click", () => {
       // Paso 1: Redirigir al link de pago (puede ser único o con alias)
       window.open("https://mpago.la/1WBsStX", "_blank");
+
+      // Paso 2: Redirigir al WhatsApp para confirmar el beat
+      setTimeout(() => {
+        const mensaje = encodeURIComponent("Hola Boumper, ya realicé el pago. Quiero confirmar la reserva de mi beat.");
+        window.location.href = `https://wa.me/549XXXXXXXXXX?text=${mensaje}`;
+      }, 1000); // espera 1 segundo después de abrir el pago
+    });
+    document.getElementById("boton-pagar-pp").addEventListener("click", () => {
+      // Paso 1: Redirigir al link de pago (puede ser único o con alias)
+      window.open("https://www.paypal.com/paypalme/boumperx/50", "_blank");
 
       // Paso 2: Redirigir al WhatsApp para confirmar el beat
       setTimeout(() => {
